@@ -35,7 +35,7 @@ const CustomTab = styled(props => <Tab disableRipple {...props} />)(({ theme }) 
 
 const TabPanel = props => {
 	return (
-		<Typography component="div" style={{ padding: 8 * 3 }}>
+		<Typography component="div" style={{ padding: "24px 0px" }}>
 			{props.children}
 		</Typography>
 	);

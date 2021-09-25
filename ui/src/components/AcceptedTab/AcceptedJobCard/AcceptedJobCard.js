@@ -5,9 +5,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
@@ -17,8 +15,10 @@ import UserAvatar from "react-user-avatar";
 //Material UI Icons
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import PhoneIcon from "@mui/icons-material/Phone";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
-import { getInvitedDateFormat } from "../../../utils/helper";
+import { getAcceptedDateFormat } from "../../../utils/helper";
 
 // Styles
 import { styled } from "@mui/material/styles";
@@ -33,31 +33,24 @@ const BusinessCenterIconStyled = styled(BusinessCenterIcon)({
 	paddingTop: "4px"
 });
 
-const PrimaryButtonStyled = styled(props => <Button disableRipple {...props} />)(({ theme }) => ({
-	textTransform: "none",
-	borderRadius: "1px",
-	color: "#FFF",
-	backgroundColor: "#FF7A12",
-	borderBottom: "2px solid #DF6A14",
-	fontWeight: theme.typography.fontWeightBold,
-	"&:hover": {
-		backgroundColor: "#FF7A12"
-	}
-}));
+const PhoneIconStyled = styled(PhoneIcon)({
+	color: "#414141",
+	paddingTop: "4px"
+});
 
-const SecondaryButtonStyled = styled(props => <Button disableRipple {...props} />)(({ theme }) => ({
-	textTransform: "none",
-	borderRadius: "1px",
-	color: "#6C6C6C",
-	backgroundColor: "#EEEEEE",
-	borderBottom: "2px solid #BEBEBE",
-	fontWeight: theme.typography.fontWeightBold,
-	"&:hover": {
-		backgroundColor: "#EEEEEE"
-	}
-}));
+const MailOutlineIconStyled = styled(MailOutlineIcon)({
+	color: "#414141",
+	paddingTop: "4px"
+});
 
-const InvitedJobCard = () => {
+const CardContentStyled = styled(CardContent)({
+	padding: 0,
+	"&:last-child": {
+		paddingBottom: 0
+	}
+});
+
+const AcceptedJobCard = () => {
 	const primaryFont = {
 		style: {
 			fontSize: "medium",
@@ -68,7 +61,7 @@ const InvitedJobCard = () => {
 	return (
 		<Box>
 			<Card>
-				<CardContent sx={{ padding: 0 }}>
+				<CardContentStyled>
 					<Typography sx={{ fontSize: 20 }} color="#FFFFFF" component="div">
 						<Box sx={{ padding: 1 }}>
 							<ListItem>
@@ -77,7 +70,7 @@ const InvitedJobCard = () => {
 								</ListItemAvatar>
 								<ListItemText
 									primary="Chris"
-									secondary={getInvitedDateFormat("2021-09-23 12:04:22")}
+									secondary={getAcceptedDateFormat("2021-09-23 12:04:22")}
 									primaryTypographyProps={primaryFont}
 								/>
 							</ListItem>
@@ -104,53 +97,45 @@ const InvitedJobCard = () => {
 										JOB ID: 12345
 									</Typography>
 								</Grid>
+								<Grid item xs={3}>
+									<Typography sx={{ display: "inline-flex", color: "#909090" }} component="div">
+										$49.00 Lead Invitation
+									</Typography>
+								</Grid>
 							</Grid>
 						</Box>
 					</Typography>
 					<Divider variant="fullWidth" />
-					<Typography
-						sx={{ padding: "8px 24px" }}
-						color="text.secondary"
-						variant="body2"
-						component="div"
-					>
-						Need to paint 2 aluminium windows
-					</Typography>
-				</CardContent>
-				<Divider variant="fullWidth" />
-				<CardActions sx={{ padding: 0 }}>
-					<Box sx={{ padding: "8px 16px", "& button": { m: 1 }, flexDirection: "column" }}>
-						<PrimaryButtonStyled variant="contained">Accept</PrimaryButtonStyled>
-						<SecondaryButtonStyled variant="contained">Decline</SecondaryButtonStyled>
+					<Box sx={{ padding: "8px 24px" }}>
 						<Typography
-							variant="subtitle2"
+							sx={{ display: "inline-flex", color: "#FF9E41", fontWeight: "600", m: "0px 8px" }}
 							component="div"
-							sx={{
-								display: "inline-flex",
-								color: "#686868",
-								fontWeight: "600",
-								marginLeft: 2
-							}}
+							variant="body2"
 						>
-							49 $
+							<PhoneIconStyled />
+							<div>0400123432</div>
 						</Typography>
 						<Typography
-							variant="subtitle2"
+							sx={{ display: "inline-flex", color: "#FF9E41", fontWeight: "600", m: "0px 8px" }}
 							component="div"
-							sx={{
-								display: "inline-flex",
-								color: "#686868",
-								fontWeight: "400",
-								marginLeft: 1
-							}}
+							variant="body2"
 						>
-							Lead Invitation
+							<MailOutlineIconStyled />
+							<div>abc@pqr.com</div>
+						</Typography>
+						<Typography
+							sx={{ padding: "8px 0px" }}
+							color="text.secondary"
+							variant="body2"
+							component="div"
+						>
+							Need to paint 2 aluminium windows
 						</Typography>
 					</Box>
-				</CardActions>
+				</CardContentStyled>
 			</Card>
 		</Box>
 	);
 };
 
-export default InvitedJobCard;
+export default AcceptedJobCard;

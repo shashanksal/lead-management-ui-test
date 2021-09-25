@@ -5,8 +5,15 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 
+// Custom components import
+import InvitedJobCard from "./InvitedJobCard/InvitedJobCard";
+
 const InvitedTab = () => {
-	return <Box>InvitedTab</Box>;
+	return (
+		<Box>
+			<InvitedJobCard />
+		</Box>
+	);
 };
 
 export default InvitedTab;
