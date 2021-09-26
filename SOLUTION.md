@@ -11,6 +11,7 @@ This project is a personal project and currently in development. Users can run t
 ## Installation and Setup Instructions
 
 Clone down this repository. You will need `node`, `npm` and `Docker` installed globally on your machine.
+Create `.env` file using the template `.env.development` and add appropriate values against the parameters.
 
 - Installation: `npm install` server and ui to get `node_modules` installed respectively.  
 
