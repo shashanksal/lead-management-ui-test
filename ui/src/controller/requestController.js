@@ -24,6 +24,7 @@ const makeRequest = async (url, method, data) => {
 
 /**
  * Create header params
+ * @param url {string} Url string
  * @param method {string} HTTP request type GET | POST | PUT | DELETE
  * @param data {Object} body param object for POST request
  */
@@ -45,9 +46,8 @@ const createParams = async (url, method, data) => {
 };
 
 /**
- * Make call using Fetch API
- * @param url {string} HTTP url for making request
- * @param config Config object
+ * Make call using Axios
+ * @param params Parameter object
  */
 const makeAxiosCall = async params => {
 	let obj = {
