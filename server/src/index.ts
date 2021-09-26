@@ -8,7 +8,11 @@ const port = 8080;
 
 const jobsRouter = require("../routes/jobs.ts");
 
-server.use(cors());
+const corsOptions = {
+	origin: "http://localhost:3000"
+};
+
+server.use(cors(corsOptions));
 server.use(bodyParser.json());
 server.use(
 	bodyParser.urlencoded({
