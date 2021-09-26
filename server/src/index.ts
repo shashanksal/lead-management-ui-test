@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const server = express();
@@ -7,6 +8,7 @@ const port = 8080;
 
 const jobsRouter = require("../routes/jobs.ts");
 
+server.use(cors());
 server.use(bodyParser.json());
 server.use(
 	bodyParser.urlencoded({
