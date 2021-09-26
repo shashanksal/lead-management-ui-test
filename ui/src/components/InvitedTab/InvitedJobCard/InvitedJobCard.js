@@ -57,7 +57,18 @@ const SecondaryButtonStyled = styled(props => <Button disableRipple {...props} /
 	}
 }));
 
-const InvitedJobCard = () => {
+const InvitedJobCard = props => {
+	const {
+		contact_name,
+		category_name,
+		created_at,
+		description,
+		id,
+		name: suburb_name,
+		postcode,
+		price
+	} = props;
+	const contact_first_name = contact_name.split(" ")[0];
 	const primaryFont = {
 		style: {
 			fontSize: "medium",
@@ -65,19 +76,20 @@ const InvitedJobCard = () => {
 			color: "#414141"
 		}
 	};
+
 	return (
-		<Box>
+		<Box className="invited-card-box" sx={{ paddingBottom: 3 }}>
 			<Card>
 				<CardContent sx={{ padding: 0 }}>
 					<Typography sx={{ fontSize: 20 }} color="#FFFFFF" component="div">
 						<Box sx={{ padding: 1 }}>
 							<ListItem>
 								<ListItemAvatar>
-									<UserAvatar size="48" name="Chris" color="#FF9E41" />
+									<UserAvatar size="48" name={contact_first_name.charAt(0)} color="#FF9E41" />
 								</ListItemAvatar>
 								<ListItemText
-									primary="Chris"
-									secondary={getInvitedDateFormat("2021-09-23 12:04:22")}
+									primary={contact_first_name}
+									secondary={getInvitedDateFormat(created_at)}
 									primaryTypographyProps={primaryFont}
 								/>
 							</ListItem>
@@ -90,18 +102,20 @@ const InvitedJobCard = () => {
 								<Grid item xs={3}>
 									<Typography sx={{ display: "inline-flex", color: "#909090" }} component="div">
 										<PinDropIconStyled />
-										<div>Yandera 2112</div>
+										<div>
+											{suburb_name} {postcode}
+										</div>
 									</Typography>
 								</Grid>
 								<Grid item xs={3}>
 									<Typography sx={{ display: "inline-flex", color: "#909090" }} component="div">
 										<BusinessCenterIconStyled />
-										<div>Painter</div>
+										<div>{category_name}</div>
 									</Typography>
 								</Grid>
 								<Grid item xs={3}>
 									<Typography sx={{ display: "inline-flex", color: "#909090" }} component="div">
-										JOB ID: 12345
+										JOB ID: {id}
 									</Typography>
 								</Grid>
 							</Grid>
@@ -114,7 +128,7 @@ const InvitedJobCard = () => {
 						variant="body2"
 						component="div"
 					>
-						Need to paint 2 aluminium windows
+						{description}
 					</Typography>
 				</CardContent>
 				<Divider variant="fullWidth" />
@@ -132,7 +146,7 @@ const InvitedJobCard = () => {
 								marginLeft: 2
 							}}
 						>
-							49 $
+							{price} $
 						</Typography>
 						<Typography
 							variant="subtitle2"

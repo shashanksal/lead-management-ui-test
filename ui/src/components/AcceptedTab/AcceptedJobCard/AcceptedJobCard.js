@@ -50,7 +50,20 @@ const CardContentStyled = styled(CardContent)({
 	}
 });
 
-const AcceptedJobCard = () => {
+const AcceptedJobCard = props => {
+	const {
+		contact_name,
+		category_name,
+		created_at,
+		description,
+		id,
+		name: suburb_name,
+		postcode,
+		price,
+		contact_phone,
+		contact_email
+	} = props;
+
 	const primaryFont = {
 		style: {
 			fontSize: "medium",
@@ -59,18 +72,18 @@ const AcceptedJobCard = () => {
 		}
 	};
 	return (
-		<Box>
+		<Box className="invited-card-box" sx={{ paddingBottom: 3 }}>
 			<Card>
 				<CardContentStyled>
 					<Typography sx={{ fontSize: 20 }} color="#FFFFFF" component="div">
 						<Box sx={{ padding: 1 }}>
 							<ListItem>
 								<ListItemAvatar>
-									<UserAvatar size="48" name="Chris" color="#FF9E41" />
+									<UserAvatar size="48" name={contact_name.charAt(0)} color="#FF9E41" />
 								</ListItemAvatar>
 								<ListItemText
-									primary="Chris"
-									secondary={getAcceptedDateFormat("2021-09-23 12:04:22")}
+									primary={contact_name}
+									secondary={getAcceptedDateFormat(created_at)}
 									primaryTypographyProps={primaryFont}
 								/>
 							</ListItem>
@@ -83,23 +96,25 @@ const AcceptedJobCard = () => {
 								<Grid item xs={3}>
 									<Typography sx={{ display: "inline-flex", color: "#909090" }} component="div">
 										<PinDropIconStyled />
-										<div>Yandera 2112</div>
+										<div>
+											{suburb_name} {postcode}
+										</div>
 									</Typography>
 								</Grid>
 								<Grid item xs={3}>
 									<Typography sx={{ display: "inline-flex", color: "#909090" }} component="div">
 										<BusinessCenterIconStyled />
-										<div>Painter</div>
+										<div>{category_name}</div>
 									</Typography>
 								</Grid>
 								<Grid item xs={3}>
 									<Typography sx={{ display: "inline-flex", color: "#909090" }} component="div">
-										JOB ID: 12345
+										JOB ID: {id}
 									</Typography>
 								</Grid>
 								<Grid item xs={3}>
 									<Typography sx={{ display: "inline-flex", color: "#909090" }} component="div">
-										$49.00 Lead Invitation
+										${price} Lead Invitation
 									</Typography>
 								</Grid>
 							</Grid>
@@ -113,7 +128,7 @@ const AcceptedJobCard = () => {
 							variant="body2"
 						>
 							<PhoneIconStyled />
-							<div>0400123432</div>
+							<div>{contact_phone}</div>
 						</Typography>
 						<Typography
 							sx={{ display: "inline-flex", color: "#FF9E41", fontWeight: "600", m: "0px 8px" }}
@@ -121,7 +136,7 @@ const AcceptedJobCard = () => {
 							variant="body2"
 						>
 							<MailOutlineIconStyled />
-							<div>abc@pqr.com</div>
+							<div>{contact_email}</div>
 						</Typography>
 						<Typography
 							sx={{ padding: "8px 0px" }}
@@ -129,7 +144,7 @@ const AcceptedJobCard = () => {
 							variant="body2"
 							component="div"
 						>
-							Need to paint 2 aluminium windows
+							{description}
 						</Typography>
 					</Box>
 				</CardContentStyled>

@@ -35,7 +35,7 @@ const CustomTab = styled(props => <Tab disableRipple {...props} />)(({ theme }) 
 
 const TabPanel = props => {
 	return (
-		<Typography component="div" style={{ padding: "24px 0px" }}>
+		<Typography component="div" style={{ paddingTop: "24px" }}>
 			{props.children}
 		</Typography>
 	);
@@ -49,7 +49,6 @@ const TaskTabs = () => {
 	const [value, setValue] = useState("invited");
 
 	const handleChange = (event, newValue) => {
-		console.log("VAl ===", newValue);
 		setValue(newValue);
 	};
 
