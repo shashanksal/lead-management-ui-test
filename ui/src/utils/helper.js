@@ -35,3 +35,14 @@ const getTweleveHourTimeString = dateObject => {
 		})
 		.toLowerCase();
 };
+
+/**
+ * Convert number to Decimal digit number as per UI specs
+ * @param {Number} number Number to be converted
+ */
+export const numberFormatter = number => {
+	return new Intl.NumberFormat("en-US", {
+		minimumFractionDigits: 2,
+		maximumFractionDigits: 2
+	}).format(number);
+};

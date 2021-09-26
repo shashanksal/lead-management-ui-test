@@ -18,7 +18,7 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
-import { getAcceptedDateFormat } from "../../../utils/helper";
+import { getAcceptedDateFormat, numberFormatter } from "../../../utils/helper";
 
 // Styles
 import { styled } from "@mui/material/styles";
@@ -114,7 +114,7 @@ const AcceptedJobCard = props => {
 								</Grid>
 								<Grid item xs={3}>
 									<Typography sx={{ display: "inline-flex", color: "#909090" }} component="div">
-										${price} Lead Invitation
+										${numberFormatter(price)} Lead Invitation
 									</Typography>
 								</Grid>
 							</Grid>

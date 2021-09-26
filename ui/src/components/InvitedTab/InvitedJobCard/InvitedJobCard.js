@@ -18,7 +18,7 @@ import UserAvatar from "react-user-avatar";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 
-import { getInvitedDateFormat } from "../../../utils/helper";
+import { getInvitedDateFormat, numberFormatter } from "../../../utils/helper";
 import { BASE_URL } from "../../../utils/constants";
 
 import requestController from "../../../controller/requestController";
@@ -169,7 +169,7 @@ const InvitedJobCard = props => {
 								marginLeft: 2
 							}}
 						>
-							{price} $
+							${numberFormatter(price)}
 						</Typography>
 						<Typography
 							variant="subtitle2"
