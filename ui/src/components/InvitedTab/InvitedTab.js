@@ -29,7 +29,7 @@ const InvitedTab = () => {
 		<Box className="job-card-wrapper">
 			{newJobs.length > 0 ? (
 				newJobs.map((newJob, i) => {
-					return <InvitedJobCard {...newJob} key={i} />;
+					return <InvitedJobCard {...newJob} key={i} fireUpdateEvent={fetchData} />;
 				})
 			) : (
 				<Typography variant="h3" component="div">

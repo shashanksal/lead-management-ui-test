@@ -19,6 +19,9 @@ import PinDropIcon from "@mui/icons-material/PinDrop";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 
 import { getInvitedDateFormat } from "../../../utils/helper";
+import { BASE_URL } from "../../../utils/constants";
+
+import requestController from "../../../controller/requestController";
 
 // Styles
 import { styled } from "@mui/material/styles";
@@ -66,7 +69,8 @@ const InvitedJobCard = props => {
 		id,
 		name: suburb_name,
 		postcode,
-		price
+		price,
+		fireUpdateEvent
 	} = props;
 	const contact_first_name = contact_name.split(" ")[0];
 	const primaryFont = {
@@ -75,6 +79,15 @@ const InvitedJobCard = props => {
 			fontWeight: "600",
 			color: "#414141"
 		}
+	};
+
+	const handleButtonClick = async (status, id) => {
+		const url = `${BASE_URL}/jobs/${id}`;
+		const updateStatus = await requestController.makeRequest(url, "PUT", { status });
+		if (updateStatus.error) {
+			alert("Error updating status");
+		}
+		fireUpdateEvent();
 	};
 
 	return (
@@ -134,8 +147,18 @@ const InvitedJobCard = props => {
 				<Divider variant="fullWidth" />
 				<CardActions sx={{ padding: 0 }}>
 					<Box sx={{ padding: "8px 16px", "& button": { m: 1 }, flexDirection: "column" }}>
-						<PrimaryButtonStyled variant="contained">Accept</PrimaryButtonStyled>
-						<SecondaryButtonStyled variant="contained">Decline</SecondaryButtonStyled>
+						<PrimaryButtonStyled
+							variant="contained"
+							onClick={() => handleButtonClick("accepted", id)}
+						>
+							Accept
+						</PrimaryButtonStyled>
+						<SecondaryButtonStyled
+							variant="contained"
+							onClick={() => handleButtonClick("declined", id)}
+						>
+							Decline
+						</SecondaryButtonStyled>
 						<Typography
 							variant="subtitle2"
 							component="div"
