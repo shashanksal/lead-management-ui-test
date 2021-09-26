@@ -11,6 +11,7 @@ This project is a personal project and currently in development. Users can run t
 ## Installation and Setup Instructions
 
 Clone down this repository. You will need `node`, `npm` and `Docker` installed globally on your machine.
+
 Create `.env` file using the template `.env.development` and add appropriate values against the parameters.
 
 - Installation: `npm install` server and ui to get `node_modules` installed respectively.  
@@ -21,9 +22,9 @@ The above Docker configuration will run the mysql and ui client successfully, bu
 As a workaround, switch off the server and run the server manually.
 
 This can be done by 
-- `docker ps` to get list of all running containers
+- `docker ps` to get list of all running containers. Grab the server container id. (Hint: It'll be running on 8000 port)
 - `docker stop <container_id>` to stop the server. 
-- `npm start` from server root
+- Once docker node server is shut down, goto the local server root `./server` and the start the server using `npm start`.
 
 ## Tech Stack used
 
