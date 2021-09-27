@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AcceptedJobCard should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="invited-card-box MuiBox-root css-hshm0p"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiCardContent-root css-1wigkoz-MuiCardContent-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-body1 css-a5cuhx-MuiTypography-root"
+        >
+          <div
+            class="MuiBox-root css-hpgf8j"
+          >
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+            >
+              <div
+                class="MuiListItemAvatar-root css-1e9lk82-MuiListItemAvatar-root"
+              >
+                <div
+                  aria-label="c"
+                  class=" UserAvatar UserAvatar--dark"
+                >
+                  <div
+                    class="UserAvatar--inner"
+                    style="line-height: 48px; text-align: center; border-radius: 100%; max-width: 48px; width: 48px; max-height: 48px; height: 48px; background-color: rgb(255, 158, 65);"
+                  >
+                    c
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+                  style="font-size: medium; font-weight: 600; color: rgb(65, 65, 65);"
+                >
+                  contact name
+                </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
+                >
+                  September 27 2021 @ 10:46 pm
+                </p>
+              </div>
+            </li>
+          </div>
+        </div>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        />
+        <div
+          class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+        >
+          <div
+            class="MuiBox-root css-k4eu7j"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1me3d2y-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-j23p4t-MuiGrid-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-body1 css-dl1xkb-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-9uqwig-MuiSvgIcon-root"
+                    data-testid="PinDropIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 8c0-3.31-2.69-6-6-6S6 4.69 6 8c0 4.5 6 11 6 11s6-6.5 6-11zm-8 0c0-1.1.9-2 2-2s2 .9 2 2-.89 2-2 2c-1.1 0-2-.9-2-2zM5 20v2h14v-2H5z"
+                    />
+                  </svg>
+                  <div>
+                     1234
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-j23p4t-MuiGrid-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-body1 css-dl1xkb-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-9uqwig-MuiSvgIcon-root"
+                    data-testid="BusinessCenterIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 16v-1H3.01L3 19c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-4h-7v1h-4zm10-9h-4.01V5l-2-2h-4l-2 2v2H4c-1.1 0-2 .9-2 2v3c0 1.11.89 2 2 2h6v-2h4v2h6c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-6 0h-4V5h4v2z"
+                    />
+                  </svg>
+                  <div>
+                    category
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-j23p4t-MuiGrid-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-body1 css-dl1xkb-MuiTypography-root"
+                >
+                  JOB ID: 1
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-j23p4t-MuiGrid-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-body1 css-dl1xkb-MuiTypography-root"
+                >
+                  $100.00 Lead Invitation
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        />
+        <div
+          class="MuiBox-root css-k4eu7j"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-body2 css-rdb7ah-MuiTypography-root"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-9uqwig-MuiSvgIcon-root"
+              data-testid="PhoneIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              />
+            </svg>
+            <div>
+              0401401401
+            </div>
+          </div>
+          <div
+            class="MuiTypography-root MuiTypography-body2 css-rdb7ah-MuiTypography-root"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-9uqwig-MuiSvgIcon-root"
+              data-testid="MailOutlineIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"
+              />
+            </svg>
+            <div>
+              abc@pqr.com
+            </div>
+          </div>
+          <div
+            class="MuiTypography-root MuiTypography-body2 css-1na2k8-MuiTypography-root"
+          >
+            Description
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
