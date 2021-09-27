@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskTabs should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root css-vj1n65-MuiGrid-root"
+  >
+    <div
+      class="MuiBox-root css-8atqhb"
+    >
+      <div
+        class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+      >
+        <div
+          class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+          style="overflow: hidden; margin-bottom: 0px;"
+        >
+          <div
+            aria-label="myapp tabs"
+            class="MuiTabs-flexContainer MuiTabs-centered css-1wf8b0h-MuiTabs-flexContainer"
+            role="tablist"
+          >
+            <button
+              aria-selected="true"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary MuiTab-fullWidth Mui-selected css-pabxj7-MuiButtonBase-root-MuiTab-root"
+              role="tab"
+              tabindex="0"
+              type="button"
+            >
+              Invited
+            </button>
+            <button
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary MuiTab-fullWidth css-pabxj7-MuiButtonBase-root-MuiTab-root"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              Accepted
+            </button>
+          </div>
+          <span
+            class="MuiTabs-indicator css-1aquho2-MuiTabs-indicator"
+            style="left: 0px; width: 0px; background: rgb(255, 122, 18);"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+      style="padding-top: 24px;"
+    >
+      <div
+        class="job-card-wrapper MuiBox-root css-0"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-h3 css-gepadz-MuiTypography-root"
+        >
+          No new jobs to show
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

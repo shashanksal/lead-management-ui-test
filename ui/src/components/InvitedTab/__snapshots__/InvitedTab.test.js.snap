@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvitedTab should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="job-card-wrapper MuiBox-root css-0"
+  >
+    <div
+      class="MuiTypography-root MuiTypography-h3 css-gepadz-MuiTypography-root"
+    >
+      No new jobs to show
+    </div>
+  </div>
+</DocumentFragment>
+`;
