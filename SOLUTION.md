@@ -26,6 +26,10 @@ This can be done by
 - `docker stop <container_id>` to stop the server. 
 - Once docker node server is shut down, goto the local server root `./server` and the start the server using `npm start`.
 
+The UI can be accessed using http://localhost:3000/.
+
+UI tests can be run by navigating to UI folder `./ui`, and running `npm run test` in the terminal.
+
 ## Tech Stack used
 
 - React 17
