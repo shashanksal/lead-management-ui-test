@@ -5,7 +5,7 @@ services:
     entrypoint: ["npm", "start"]
     environment:
       NODE_ENV: development
-    image: node:10.15-alpine
+    image: node:22.14-alpine
     ports:
       - "3000:3000"
     volumes:
@@ -16,7 +16,7 @@ services:
     entrypoint: ["npm", "start"]
     environment:
       NODE_ENV: development
-    image: node:10.15-alpine
+    image: node:22.14-alpine
     links:
       - database:database
     ports:
